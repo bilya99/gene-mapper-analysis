@@ -96,3 +96,50 @@ The function will raise exceptions if:
 - Data formatting issues occur
 
 Make sure to wrap function calls in try-except blocks when using programmatically.
+
+## Streamlit Web Application
+
+A user-friendly web interface is available for the Gene Mapper Analysis tool. The Streamlit app provides:
+
+- **File Upload Interface**: Easy drag-and-drop file uploading
+- **Parameter Configuration**: Interactive controls for X and Y values
+- **Real-time Validation**: Immediate feedback on file uploads
+- **Progress Tracking**: Visual progress bar during analysis
+- **Download Results**: One-click download of the formatted Excel output
+
+### Running the Streamlit App
+
+#### Option 1: Using the run script (Recommended)
+```bash
+python run_app.py
+```
+
+#### Option 2: Direct streamlit command
+```bash
+# First install requirements
+pip install -r requirements.txt
+
+# Run the app
+streamlit run streamlit_app.py
+```
+
+### Streamlit App Features
+
+1. **Interactive Parameter Setting**: Use sidebar controls to set X and Y values
+2. **File Upload**: 
+   - Required: Peaks exported file and sample numbers file
+   - Optional: Size ranges file (auto-generated if not provided)
+3. **Real-time Validation**: Immediate feedback on file compatibility
+4. **Progress Tracking**: Visual progress bar during analysis
+5. **Download Results**: Direct download of the formatted Excel output
+6. **Help Documentation**: Built-in help sections explaining usage
+
+### Web Interface Benefits
+
+- **No Command Line Required**: User-friendly graphical interface
+- **File Validation**: Automatic checking of file formats and names
+- **Error Handling**: Clear error messages and troubleshooting guidance
+- **Cross-platform**: Works on Windows, Mac, and Linux
+- **No Installation Hassles**: All processing happens locally
+
+The Streamlit app makes the gene mapper analysis accessible to users who prefer a graphical interface over command-line tools.
